@@ -16,7 +16,7 @@ export const ConfirmationWindow = (props: {
       id="confirmation-background"
       className={`${
         hidden ? "hidden" : ""
-      } absolute z-50 bg-slate-900/50 top-0 left-0 w-screen h-screen flex justify-center items-center`}
+      } fixed z-50 bg-slate-900/50 top-0 left-0 w-screen h-screen flex justify-center items-center`}
     >
       <div
         id="confirmation-box"
