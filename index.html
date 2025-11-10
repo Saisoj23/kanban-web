@@ -1,121 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <script src="./Public/index.js" defer type="module"></script>
-    <script src="./Public/builder.js" defer type="module"></script>
-
-    <title>Kanban-do</title>
+    <title>poyecto-final-react</title>
   </head>
-  <body class="bg-slate-600">
-    <div
-      id="confirmation-background"
-      class="hidden absolute z-50 bg-slate-900/50 top-0 left-0 w-screen h-screen flex justify-center items-center"
-    >
-      <div id="confirmation-box" class="bg-white p-6 rounded-lg">
-        <p id="confirmation-message" class="mb-4 text-lg">
-          ¿Seguro que desea eliminar la columna?
-        </p>
-        <form class="flex justify-center gap-4">
-          <button
-            type="submit"
-            class="text-white end-2.5 bottom-2.5 bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800"
-          >
-            Eliminar
-          </button>
-          <button
-            type="submit"
-            class="text-white end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-          >
-            Cancelar
-          </button>
-        </form>
-      </div>
-    </div>
-    <header class="bg-slate-800 flex justify-between items-center p-2">
-      <h1 class="text-slate-50 text-5xl font-bold truncate">Kanban-do</h1>
-      <form class="flex items-center gap-3">
-        <button
-          type="submit"
-          class="text-white end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-        >
-          New Board
-        </button>
-        <label
-          for="board-selector"
-          class="block xl place-self-center mb-2 text-sm font-medium text-slate-900 dark:text-white"
-          >Select board</label
-        >
-        <select
-          id="board-selector"
-          name="board-selector"
-          class="bg-slate-50 border border-slate-300 text-slate-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 dark:bg-slate-700 dark:border-slate-600 dark:placeholder-slate-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-        >
-          <option selected>Board1</option>
-          <option>Study</option>
-          <option>GameProyect</option>
-        </select>
-        <button
-          type="submit"
-          class="text-white end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-        >
-          Rename
-        </button>
-        <button
-          type="submit"
-          class="text-white end-2.5 bottom-2.5 bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800"
-        >
-          Delete
-        </button>
-      </form>
-    </header>
-
-    <form id="add-task-form" class="max-w-md mx-auto mt-4">
-      <label
-        for="add-task"
-        class="mb-2 text-sm font-medium text-slate-900 sr-only dark:text-white"
-        >Add task</label
-      >
-      <div class="relative flex flex-row">
-        <input
-          type="text"
-          name="add-task"
-          id="add-task-input"
-          class="block w-full p-4 pr-20 text-sm text-slate-900 border border-slate-300 rounded-lg bg-slate-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-slate-700 dark:border-slate-600 dark:placeholder-slate-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-          placeholder="New Task..."
-          required
-          maxlength="300"
-        />
-        <button
-          type="submit"
-          class="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-        >
-          Add
-        </button>
-      </div>
-    </form>
-
-    <main
-      id="main-board"
-      class="flex justify-center items-start flex-wrap gap-4 m-4"
-    >
-      <div
-        id="add-column-button-container"
-        class="w-3/10 min-w-80 flex justify-center"
-      >
-        <button
-          id="add-column-button"
-          class="bg-slate-800 translate-y-12 hover:bg-slate-500 focus:ring-4 focus:outline-none focus:ring-slate-300 rounded-full p-2"
-        >
-          <img
-            src="./Public/SVGs/add-circle-svgrepo-com.svg"
-            class="w-12 h-12"
-          />
-        </button>
-      </div>
-    </main>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
