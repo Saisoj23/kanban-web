@@ -9,8 +9,7 @@ export const ConfirmationWindow = (props: {
 }) => {
   const { hidden = true, content } = props;
 
-  const { value: enabledUI, updateValue: setEnabledUI } =
-    useContext(EnabledUIContext);
+  const { updateValue: setEnabledUI } = useContext(EnabledUIContext);
   return (
     <div
       id="confirmation-background"
@@ -72,7 +71,7 @@ export const ConfirmationWindow = (props: {
               {content.rename ? "Rename" : "Delete"}
             </button>
             <button
-              onClick={(event) => {
+              onClick={() => {
                 setEnabledUI(true);
               }}
               type="reset"

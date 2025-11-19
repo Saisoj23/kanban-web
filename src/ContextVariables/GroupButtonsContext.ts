@@ -1,15 +1,29 @@
 import { createContext } from "react";
 
 export let GroupButtonsColumnContext = createContext({
-  editName: (column: number) => {},
-  delete: (column: number) => {},
-  move: (column: number, backward: boolean = false) => {},
+  editName: (column: number) => {
+    column;
+  },
+  delete: (column: number) => {
+    column;
+  },
+  move: (column: number, backward: boolean = false) => {
+    column;
+    backward;
+  },
 });
 
 export let GroupButtonsTaskContext = createContext({
-  editName: (task: string) => {},
-  delete: (task: string) => {},
-  move: (task: string, backward: boolean = false) => {},
+  editName: (task: string) => {
+    task;
+  },
+  delete: (task: string) => {
+    task;
+  },
+  move: (task: string, backward: boolean = false) => {
+    task;
+    backward;
+  },
 });
 
 export interface GroupButtonsType {

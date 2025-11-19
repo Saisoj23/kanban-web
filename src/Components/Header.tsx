@@ -9,8 +9,7 @@ const Header = (props: {
 }) => {
   const { boardList, selectedBoard, boardActions } = props;
 
-  const { value: enabledUI, updateValue: setEnabledUI } =
-    useContext(EnabledUIContext);
+  const { value: enabledUI } = useContext(EnabledUIContext);
 
   return (
     <header className="w-screen bg-slate-800 flex justify-between items-center p-2">

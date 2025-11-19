@@ -6,8 +6,7 @@ const TaskInput = (props: {
 }) => {
   const { addTask } = props;
 
-  const { value: enabledUI, updateValue: setEnabledUI } =
-    useContext(EnabledUIContext);
+  const { value: enabledUI } = useContext(EnabledUIContext);
 
   return (
     <form

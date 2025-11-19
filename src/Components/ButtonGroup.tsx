@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import EnabledUIContext from "../ContextVariables/EnabledUIContext";
 
 import leftArrowIcon from "../assets/arrow-left-3-svgrepo-com.svg";
@@ -17,8 +17,7 @@ export const ButtonGroup = (props: {
   task?: string;
   large?: boolean;
 }) => {
-  const { value: enabledUI, updateValue: setEnabledUI } =
-    useContext(EnabledUIContext);
+  const { value: enabledUI } = useContext(EnabledUIContext);
 
   const { column = 0, task = "", large = false } = props;
 
@@ -65,8 +64,8 @@ export const ButtonGroup = (props: {
         disabled={!enabledUI}
         onClick={() => {
           large
-            ? groupButtonMethods.editName(column, "newName")
-            : groupButtonMethods.editName(task, "newName");
+            ? groupButtonMethods.editName(column)
+            : groupButtonMethods.editName(task);
         }}
         className={`edit absolute ${
           large ? "w-6 h-6" : "w-5 h-5"
